@@ -56,7 +56,7 @@ const home = `<main id="main">
   </section>
   <section class="work wrap" id="work" aria-labelledby="work-title"><div class="section-heading reveal"><h2 id="work-title">Selected <i>work.</i></h2></div><div class="project-list">${projects.map(projectRow).join('')}</div><div class="all-games-link"><a class="text-link" href="./games/">All games <span aria-hidden="true">→</span></a></div></section>
   <section class="about wrap" id="about" aria-labelledby="about-title"><div class="about-label reveal"><h2 id="about-title">About me</h2></div><div class="about-copy reveal"><p>My games take absurd and playful ideas and ground them in rhetorical situations.</p><p>To be wise is to know you are a fool. It is the desire to entertain and to laugh. I want to embody this ideal of a wise fool.</p><div class="bio-links"><a class="text-link" href="./assets/miles-sanger-resume.pdf" download="Miles-Sanger-Resume.pdf">Download résumé <span class="file-type">PDF</span><span aria-hidden="true">↓</span></a><a class="text-link" href="https://www.linkedin.com/in/miles-behrenhausen-sanger" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a></div></div></section>
-  <section class="writing wrap" id="writing" aria-labelledby="writing-title"><div class="writing-inner reveal"><div><h2 id="writing-title">Words <i>&amp;</i><br> other things.</h2></div><div class="poetry-list">${poems.map(p => `<a class="poem-link" href="./writing/${p.slug}/">${esc(p.title)}</a>`).join('')}<a class="poem-link" href="./assets/poetry/soup-inc.pdf">Soup Inc.</a></div></div></section>
+  <section class="writing wrap" id="writing" aria-labelledby="writing-title"><div class="writing-inner reveal"><div><h2 id="writing-title">Poetry <i>&amp;</i><br> other words.</h2></div><div class="poetry-list">${poems.map(p => `<a class="poem-link" href="./writing/${p.slug}/">${esc(p.title)}</a>`).join('')}<a class="poem-link" href="./assets/poetry/soup-inc.pdf">Soup Inc.</a></div></div></section>
   <section class="contact wrap" id="contact" aria-labelledby="contact-title"><div class="reveal"><h2 id="contact-title">Let’s make<br><i>something.</i></h2><a class="contact-email" href="mailto:behrenha@usc.edu">behrenha@usc.edu</a></div></section>
 </main>`;
 
@@ -82,6 +82,7 @@ if (out !== '.') {
   for (const item of ['assets', 'styles.css', 'site.js', '.nojekyll', 'CNAME', 'robots.txt', 'sitemap.xml']) await cp(item, `${out}/${item}`, { recursive: true });
 }
 console.log(`Built homepage, games index, ${allProjects.length} project pages, ${poems.length} poetry pages, and 404 page in ${out}`);
+
 
 
 

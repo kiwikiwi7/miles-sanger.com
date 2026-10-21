@@ -28,7 +28,7 @@
 @media(max-width:700px){.poem-page{padding-block:30px 60px}.poem{margin-top:45px}.poem h1{margin-bottom:36px}.poem-body{font-size:20px;line-height:1.65}.poem-link{font-size:27px}.hero-emblem figcaption{font-size:19px}}
 
 .all-games-link{display:flex;justify-content:flex-end;padding-top:24px}
-.bio-links{margin-top:26px}
+.bio-links{margin-top:26px;display:flex;align-items:center;flex-wrap:wrap;gap:14px 28px}
 .file-type{font-size:12px;letter-spacing:.06em;color:var(--muted)}
 .games-page{padding-block:50px 100px;min-height:80vh}
 .games-page>h1{font-size:clamp(58px,7vw,90px);letter-spacing:-.03em;margin:60px 0 50px}
@@ -68,3 +68,4 @@
 .project-links .text-link,.poem-link{text-decoration:underline;text-decoration-color:var(--line);text-decoration-thickness:1px;text-underline-offset:5px}
 .project-links .text-link:hover,.poem-link:hover{text-decoration-color:currentColor}
 @media(max-width:700px){.project-with-art .project-main{padding-block:0}.project-roles{gap:7px 15px}}
+

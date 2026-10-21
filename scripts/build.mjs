@@ -30,7 +30,7 @@ function page(title, body, base = './', description = 'Miles Sanger — Game Des
     <nav aria-label="Main navigation"><a href="${base}#work">Games</a><a href="${base}#about">About</a><a href="${base}#writing">Writing</a><a class="nav-contact" href="mailto:behrenha@usc.edu">Contact</a></nav>
   </header>
   ${body}
-  <footer class="site-footer wrap"><span>Curiosity <i>&amp;</i> foolishness.</span></footer>
+  <footer class="site-footer wrap"><i class="footer-amp" aria-hidden="true">&amp;</i><p class="footer-tagline">Curiosity <i>&amp;</i> foolishness.</p><small class="footer-copyright">© ${new Date().getUTCFullYear()} Miles Sanger</small></footer>
 </body></html>`;
 }
 

@@ -3,6 +3,12 @@
 Domain: `miles-sanger.com`
 GitHub account: `kiwikiwi7`
 
+Repository: https://github.com/kiwikiwi7/miles-sanger.com
+
+The initial GitHub Actions deployment succeeded on October 21, 2026. The custom domain is set in GitHub, domain ownership is verified, and all six Cloudflare records (four A, one CNAME, one verification TXT) are saved as DNS only. The certificate for https://miles-sanger.com is active and Enforce HTTPS is enabled.
+
+Live checks passed over HTTPS for the homepage, games index, four project pages, two poetry pages, and résumé PDF. The www CNAME resolves correctly through Cloudflare and Google public DNS, and its HTTP redirect works. At setup completion, the www HTTPS certificate and the HTTP-to-HTTPS redirect were still propagating; verify these again once GitHub's edge configuration catches up.
+
 ## GitHub
 
 1. Create a public repository for this portfolio in `kiwikiwi7` and push the project files. Free GitHub Pages requires a public source repository.

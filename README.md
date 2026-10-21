@@ -22,7 +22,7 @@ After editing, regenerate the preview using `node scripts/build.mjs --source`. `
 
 ## GitHub Pages
 
-The included workflow builds and publishes `dist/` when changes are pushed to `main` or `master`, once GitHub Pages is configured to use GitHub Actions. See `HOSTING.md` for GitHub setup and Cloudflare DNS records. This project has not been pushed or published yet.
+The site is live at https://miles-sanger.com and hosted with GitHub Pages from https://github.com/kiwikiwi7/miles-sanger.com. The included workflow builds and publishes `dist/` when changes are pushed to `main` or `master`. The active branch is `master`. See `HOSTING.md` for GitHub setup and Cloudflare DNS records.
 
 Set **miles-sanger.com** as the repository's Pages custom domain, verify ownership, and follow GitHub's current DNS instructions at https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site. Enable HTTPS once the certificate is available. The included `CNAME`, canonical links, and sitemap already use miles-sanger.com.
 

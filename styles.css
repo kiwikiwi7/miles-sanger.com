@@ -100,3 +100,10 @@ html[data-background="flat"] body{background-image:none}
 @media(max-width:700px){body{background-image:radial-gradient(ellipse 540px 640px at 85% 250px,rgba(176,203,188,.085),rgba(176,203,188,0) 80%),url('./assets/grain.svg')}}
 
 
+
+/* An ambient pool of the same seafoam light sits below each portrait. */
+.headshot-frame{position:relative;isolation:isolate;width:260px;max-width:100%;margin-top:30px}
+.headshot-frame:before{content:'';position:absolute;z-index:-1;inset:15% -65% -60%;background:radial-gradient(ellipse at 50% 60%,rgba(176,203,188,.13),rgba(176,203,188,0) 70%);pointer-events:none}
+.headshot-frame .about-headshot{width:100%;margin:0}
+.about-portrait .headshot-frame{width:100%;margin:0}
+@media(max-width:700px){.headshot-frame{width:240px;margin-top:24px}.headshot-frame:before{inset:20% -12px -50%}.about-portrait .headshot-frame{width:100%;margin:0}}

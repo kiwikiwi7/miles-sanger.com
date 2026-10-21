@@ -73,3 +73,23 @@
 
 @media(max-width:420px){.site-footer{gap:10px}.footer-amp{font-size:38px}.footer-tagline{font-size:14px;max-width:140px}.footer-copyright{font-size:11px}}
 
+
+/* Personal copy and portrait share the same quiet two-column rhythm. */
+.about-headshot{width:260px;max-width:100%;height:auto;margin-top:30px}
+.about-copy{align-self:center}
+.more-about{margin-top:25px;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:6px}
+.about-page{padding-block:50px 95px}
+.about-page>h1{font-size:clamp(60px,7vw,96px);letter-spacing:-.035em;margin:55px 0 45px}
+.about-page>h1 i{color:var(--seafoam)}
+.about-layout{display:grid;grid-template-columns:320px minmax(0,1fr);gap:75px;align-items:start}
+.about-portrait img{width:100%;height:auto}
+.portrait-links{display:flex;flex-direction:column;align-items:flex-start;gap:16px;margin-top:25px}
+.long-bio{font-size:23px;line-height:1.55;max-width:740px}
+.long-bio p+p{margin-top:25px}
+.skills-section{border-top:1px solid var(--line);margin-top:75px;padding-top:45px}
+.skills-section h2{font-size:48px;letter-spacing:-.025em}
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px 70px;margin:32px 0 0}
+.skills-grid dt{font-size:25px;margin-bottom:8px;color:var(--seafoam)}
+.skills-grid dd{font-size:20px;line-height:1.55;margin:0;color:var(--muted);max-width:470px}
+@media(max-width:1000px){.about-layout{grid-template-columns:260px minmax(0,1fr);gap:40px}.long-bio{font-size:22px}}
+@media(max-width:700px){.about-headshot{width:240px;margin-top:24px}.about-page{padding-block:30px 65px}.about-page>h1{font-size:58px;margin:38px 0 32px}.about-layout{grid-template-columns:1fr;gap:36px}.about-portrait{max-width:350px}.long-bio{font-size:21px;line-height:1.6}.portrait-links{flex-direction:row;flex-wrap:wrap;gap:12px 24px}.skills-section{margin-top:50px;padding-top:35px}.skills-section h2{font-size:42px}.skills-grid{grid-template-columns:1fr;gap:27px}.skills-grid dt{font-size:24px}.skills-grid dd{font-size:19px}}

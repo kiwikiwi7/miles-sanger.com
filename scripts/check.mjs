@@ -15,7 +15,7 @@ for (const file of await walk(root)) {
   const html = await readFile(file, 'utf8');
   for (const [, ref] of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
     if (/^(https?:|mailto:|#)/.test(ref)) continue;
-    let target = path.resolve(path.dirname(file), ref.split('#')[0]);
+    let target = path.resolve(path.dirname(file), ref.split(/[?#]/)[0]);
     try {
       if ((await stat(target)).isDirectory()) target = path.join(target, 'index.html');
       await stat(target);

@@ -11,6 +11,7 @@ Run `node scripts/build.mjs --source`, then `npm run dev`. Open http://127.0.0.1
 - Project roles, facts, descriptions, links, and images: `site-data.mjs`.
 - `projects` controls the four homepage features, in order. `additionalProjects` holds your selected secondary games; these appear on the separate `/games/` index and have their own project pages.
 - Homepage copy and page templates: `scripts/build.mjs`.
+- Short homepage bio, full About page biography, and skills: `about-data.mjs`. Headshot: `assets/miles-sanger-headshot.jpg`.
 - Colors, typography, responsive layout, and motion: `styles.css`.
 - Put screenshots in `assets/`, then add `{ src: 'assets/filename.png', alt: 'Your description' }` to the project's `images` array.
 - Add project prose to its `description` field. Blank descriptions render no filler copy.

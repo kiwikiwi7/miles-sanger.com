@@ -93,3 +93,10 @@
 .skills-grid dd{font-size:20px;line-height:1.55;margin:0;color:var(--muted);max-width:470px}
 @media(max-width:1000px){.about-layout{grid-template-columns:260px minmax(0,1fr);gap:40px}.long-bio{font-size:22px}}
 @media(max-width:700px){.about-headshot{width:240px;margin-top:24px}.about-page{padding-block:30px 65px}.about-page>h1{font-size:58px;margin:38px 0 32px}.about-layout{grid-template-columns:1fr;gap:36px}.about-portrait{max-width:350px}.long-bio{font-size:21px;line-height:1.6}.portrait-links{flex-direction:row;flex-wrap:wrap;gap:12px 24px}.skills-section{margin-top:50px;padding-top:35px}.skills-section h2{font-size:42px}.skills-grid{grid-template-columns:1fr;gap:27px}.skills-grid dt{font-size:24px}.skills-grid dd{font-size:19px}}
+
+/* Still, procedural grain and one faint pool of seafoam light. */
+body{background-image:radial-gradient(ellipse 950px 690px at 73% 210px,rgba(176,203,188,.095),rgba(176,203,188,0) 78%),url('./assets/grain.svg');background-size:auto,192px 192px;background-repeat:no-repeat,repeat}
+html[data-background="flat"] body{background-image:none}
+@media(max-width:700px){body{background-image:radial-gradient(ellipse 540px 640px at 85% 250px,rgba(176,203,188,.085),rgba(176,203,188,0) 80%),url('./assets/grain.svg')}}
+
+

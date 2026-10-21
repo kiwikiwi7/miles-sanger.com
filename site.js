@@ -1,3 +1,6 @@
+// Local visual comparison: ?background=flat restores the original background.
+document.documentElement.dataset.background = new URLSearchParams(window.location.search).get('background') === 'flat' ? 'flat' : 'textured';
+
 // Content stays visible if JavaScript is unavailable or reduced motion is enabled.
 if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   document.documentElement.classList.add('js-motion');

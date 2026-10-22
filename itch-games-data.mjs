@@ -38,39 +38,11 @@ export const itchGames = [
     "release": "Available on itch.io"
   },
   {
-    "slug": "owenexe",
-    "title": "Owen.EXE",
-    "roles": [],
-    "description": "Owen wants you to find his 7 screenplays!",
-    "images": [
-      {
-        "src": "assets/games/owenexe.webp",
-        "alt": "Owen.EXE title artwork",
-        "width": 1280,
-        "height": 720,
-        "kind": "image"
-      }
-    ],
-    "screenshots": [
-      {
-        "file": "owenexe-2.webp",
-        "alt": "A laptop displaying Owen.EXE’s escape screen",
-        "width": 3024,
-        "height": 4032
-      }
-    ],
-    "links": [
-      {
-        "label": "Play in browser",
-        "url": "https://miles-sanger.itch.io/owenexe"
-      }
-    ],
-    "release": "Available on itch.io"
-  },
-  {
     "slug": "the-brightest-stars",
     "title": "The Brightest Stars",
-    "roles": [],
+    "roles": [
+      "Writer"
+    ],
     "description": "A narrative stealth game about Violet, an artist struggling to survive in a corporate space.",
     "images": [
       {
@@ -88,7 +60,8 @@ export const itchGames = [
         "url": "https://magic-circle.itch.io/the-brightest-stars"
       }
     ],
-    "release": "Available on itch.io"
+    "release": "Available on itch.io",
+    "period": "October 2025"
   },
   {
     "slug": "power-baseball-2000",

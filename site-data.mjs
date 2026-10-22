@@ -1,3 +1,4 @@
+import { itchGames } from './itch-games-data.mjs';
 import { otherGames } from './other-games-data.mjs';
 
 // Project facts and links. Add your own copy to description and images here.
@@ -62,6 +63,7 @@ export const projects = [
 // Additional selected games appear on /games/, keeping the four homepage features above.
 // Use the same fields as a featured project; number is optional.
 export const additionalProjects = [
+  ...itchGames,
   ...otherGames,
   {
     slug: 'biome-buyout', title: 'Biome Buyout', category: 'Board game',

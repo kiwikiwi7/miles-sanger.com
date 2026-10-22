@@ -102,6 +102,8 @@ html[data-background="flat"] body{background-image:none}
 
 
 /* An ambient pool of the same seafoam light sits below each portrait. */
+.project-credits{font-size:18px;color:var(--muted);margin-top:25px;max-width:750px}
+@media(max-width:700px){.project-intro h1.long-title{font-size:clamp(32px,10vw,60px)}}
 .project-gallery{margin-top:75px;padding-top:35px;border-top:1px solid var(--line)}
 .project-gallery h2{font-size:38px;margin-bottom:30px}
 .screenshot-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start}

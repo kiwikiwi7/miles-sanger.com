@@ -1,3 +1,5 @@
+import { otherGames } from './other-games-data.mjs';
+
 // Project facts and links. Add your own copy to description and images here.
 export const projects = [
   {
@@ -60,6 +62,7 @@ export const projects = [
 // Additional selected games appear on /games/, keeping the four homepage features above.
 // Use the same fields as a featured project; number is optional.
 export const additionalProjects = [
+  ...otherGames,
   {
     slug: 'biome-buyout', title: 'Biome Buyout', category: 'Board game',
     roles: ['Game Designer', 'Director'], team: '4 people', period: 'October–November 2025',

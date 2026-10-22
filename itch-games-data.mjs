@@ -114,7 +114,8 @@ export const itchGames = [
         "url": "https://miles-sanger.itch.io/power-baseball-2000"
       }
     ],
-    "release": "Available on itch.io"
+    "release": "Available on itch.io",
+    "period": "February 2025"
   },
   {
     "slug": "trumpetgod",
@@ -138,6 +139,7 @@ export const itchGames = [
         "url": "https://miles-sanger.itch.io/trumpetgod"
       }
     ],
-    "release": "Available on itch.io"
+    "release": "Available on itch.io",
+    "team": "Solo"
   }
 ];

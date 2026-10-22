@@ -102,6 +102,15 @@ html[data-background="flat"] body{background-image:none}
 
 
 /* An ambient pool of the same seafoam light sits below each portrait. */
+.project-gallery{margin-top:75px;padding-top:35px;border-top:1px solid var(--line)}
+.project-gallery h2{font-size:38px;margin-bottom:30px}
+.screenshot-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start}
+.screenshot-link{display:block;width:100%;max-width:var(--image-width);justify-self:center}
+.screenshot-link img{width:100%;height:auto}
+.screenshot-grid:not(.card-gallery) .screenshot-link:last-child:nth-child(odd){grid-column:1/-1}
+.card-gallery{grid-template-columns:minmax(0,207px) minmax(0,673px);justify-content:center;align-items:center;gap:40px}
+@media(max-width:700px){.project-gallery{margin-top:50px}.project-gallery h2{font-size:32px}.screenshot-grid,.card-gallery{grid-template-columns:minmax(0,1fr);gap:24px}}
+
 .headshot-frame{position:relative;isolation:isolate;width:260px;max-width:100%;margin-top:30px}
 .headshot-frame:before{content:'';position:absolute;z-index:-1;inset:25% -65% -35%;background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(176,203,188,.13) 0%,rgba(176,203,188,.07) 35%,rgba(176,203,188,0) 100%);pointer-events:none}
 .headshot-frame .about-headshot{width:100%;margin:0}

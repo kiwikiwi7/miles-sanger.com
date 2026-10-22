@@ -12,7 +12,7 @@ export const fullBio = [
 ];
 
 export const skills = [
-  { category: 'Game Development', items: ['Unity (6+ yrs)', 'Unreal', 'Twine', 'AI/LLM Integration', 'Narrative Design'] },
+  { category: 'Game Development', items: ['Unity (6+ yrs)', 'Unreal', 'Twine', 'AI/LLM Integration', 'Narrative Design', 'Usability/QA'] },
   { category: 'Project Management', items: ['Linear', 'Jira', 'Google/Microsoft suite'] },
   { category: 'Programming', items: ['C#', 'Java', 'Blueprints', 'Python (PyTorch)'] },
   { category: 'Certificates', items: ['CalArts Game Design', 'UCLA Gamelab Game Design'] }

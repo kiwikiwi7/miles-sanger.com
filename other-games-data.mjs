@@ -6,7 +6,11 @@ export const otherGames = [
     "team": "2 people",
     "period": "March–May 2026",
     "description": "A 1v1 arena fighter where both players duel as birds.",
-    "roles": [],
+    "roles": [
+      "Programmer",
+      "Designer",
+      "Director"
+    ],
     "links": [],
     "images": [
       {
@@ -150,7 +154,8 @@ export const otherGames = [
         "width": 1610,
         "height": 1003
       }
-    ]
+    ],
+    "period": "April 2026"
   },
   {
     "slug": "keys-and-doors",
@@ -186,7 +191,8 @@ export const otherGames = [
         "width": 1639,
         "height": 1024
       }
-    ]
+    ],
+    "period": "September 2026"
   },
   {
     "slug": "under-the-pines",
@@ -217,7 +223,8 @@ export const otherGames = [
         "width": 2048,
         "height": 1280
       }
-    ]
+    ],
+    "description": "A game about a small creature lost in the woods which finds a giant mech that destroys anything in its path."
   },
   {
     "slug": "the-last-day",
@@ -231,7 +238,11 @@ export const otherGames = [
         "url": "https://drive.google.com/file/d/1UyR4SMRrY01H9-QnoWDM0qhZhrYwFBb4/view?usp=sharing"
       }
     ],
-    "roles": [],
+    "roles": [
+      "Designer",
+      "Sound",
+      "Narrative"
+    ],
     "images": [
       {
         "src": "assets/games/the-last-day.webp",

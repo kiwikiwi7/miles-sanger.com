@@ -33,14 +33,19 @@
 .games-page{padding-block:50px 100px;min-height:80vh}
 .games-page>h1{font-size:clamp(58px,7vw,90px);letter-spacing:-.03em;margin:60px 0 50px}
 .games-page>h1 i{color:var(--seafoam)}
-.archive-game{position:relative;padding:30px 230px 30px 0;border-top:1px solid var(--line)}
+.archive-section+.archive-section{margin-top:75px}
+.archive-section>h2{font-size:32px;margin-bottom:28px;color:var(--seafoam)}
+.archive-game{display:grid;grid-template-columns:220px minmax(0,1fr) 100px;gap:30px;align-items:center;padding:30px 0;border-top:1px solid var(--line)}
 .archive-game:last-child{border-bottom:1px solid var(--line)}
-.archive-game h2{font-size:38px;letter-spacing:-.02em}
-.archive-game h2 a{display:inline-flex;gap:24px;align-items:center}
-.archive-game h2 span{font-size:24px;color:var(--seafoam)}
-.archive-game p{font-size:19px;color:var(--muted);margin-top:12px}
-.archive-period{position:absolute;right:0;top:35px;color:var(--muted);font-size:18px}
-@media(max-width:700px){.games-page{padding-block:30px 65px}.games-page>h1{margin:45px 0 35px}.archive-game{padding:25px 0}.archive-game h2{font-size:32px}.archive-game p{font-size:17px}.archive-period{position:static;display:block;font-size:16px;margin-top:12px}}
+.archive-art{height:145px;display:flex;align-items:center;justify-content:center;background:var(--bg-deep);padding:8px}
+.archive-art img{width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain}
+.archive-game h3{font-size:35px;letter-spacing:-.02em;overflow-wrap:anywhere}
+.archive-description{font-size:20px;margin-top:12px;line-height:1.4;max-width:660px}
+.archive-meta{font-size:17px;color:var(--muted);margin-top:12px;line-height:1.5}
+.archive-actions{display:flex;flex-direction:column;align-items:flex-end;gap:14px}
+.archive-actions .text-link{font-size:18px;white-space:nowrap}
+@media(max-width:900px){.archive-game{grid-template-columns:180px minmax(0,1fr);gap:16px 25px}.archive-actions{grid-column:2;flex-direction:row;align-items:center}.archive-art{grid-row:1/3}}
+@media(max-width:700px){.games-page{padding-block:30px 65px}.games-page>h1{margin:45px 0 35px}.archive-section>h2{font-size:28px;margin-bottom:22px}.archive-section+.archive-section{margin-top:55px}.archive-game{grid-template-columns:120px minmax(0,1fr);padding:24px 0;gap:14px 18px;align-items:start}.archive-art{height:100px;grid-row:1;padding:5px}.archive-game h3{font-size:29px}.archive-description{grid-column:1/-1;font-size:19px}.archive-copy{display:contents}.archive-copy h3{grid-column:2;grid-row:1;align-self:center}.archive-meta{grid-column:1/-1;font-size:16px;margin-top:0}.archive-actions{grid-column:1/-1;gap:25px}.archive-actions .text-link{font-size:17px}}
 
 /* Consistent image frames connect the different formats without cropping the artwork. */
 .project-with-art{grid-template-columns:360px minmax(0,1fr);gap:22px 48px;align-items:start;padding-block:38px}
@@ -60,8 +65,8 @@
 @media(max-width:700px){.project-with-art{grid-template-columns:minmax(0,1fr);gap:22px;padding-block:30px}.project-media{grid-column:1;grid-row:1;height:260px;padding:15px}.project-with-art .project-main{grid-column:1;grid-row:2;padding-top:0}.project-with-art .project-meta{grid-column:1;grid-row:3;margin:0;gap:7px 15px}.project-with-art .project-meta .status{flex-basis:auto}.project-with-art h3{font-size:39px}.project-with-art .project-description{font-size:21px}.project-with-art .project-roles{max-width:100%;font-size:16px}.detail-portrait{max-height:800px}.detail-image{height:auto}}
 
 /* A single role summary and action keep each project easy to scan. */
-.project h3 a,.archive-game h2 a{text-decoration:underline;text-decoration-color:transparent;text-decoration-thickness:1px;text-underline-offset:7px;transition:text-decoration-color .2s,color .2s}
-.project h3 a:hover,.archive-game h2 a:hover{color:var(--seafoam);text-decoration-color:currentColor}
+.project h3 a,.archive-game h3 a{text-decoration:underline;text-decoration-color:transparent;text-decoration-thickness:1px;text-underline-offset:7px;transition:text-decoration-color .2s,color .2s}
+.project h3 a:hover,.archive-game h3 a:hover{color:var(--seafoam);text-decoration-color:currentColor}
 .project-roles{display:flex;align-items:center;flex-wrap:wrap;gap:5px 20px}
 .role-status{display:inline-flex;align-items:center;gap:9px;font-size:14px;color:var(--muted)}
 .role-status:before{content:'';width:4px;height:4px;background:var(--coral);border-radius:50%}

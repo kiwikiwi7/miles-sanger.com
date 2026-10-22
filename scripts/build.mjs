@@ -69,7 +69,29 @@ await writeFile(`${out}/index.html`, page('Miles Sanger — Game Designer, Produ
 const aboutPage = `<main id="main" class="about-page wrap"><a class="back-link text-link" href="../#about"><span aria-hidden="true">←</span> Home</a><h1>Hi, I’m <i>Miles!</i></h1><div class="about-layout"><aside class="about-portrait"><div class="headshot-frame"><img src="../assets/miles-sanger-headshot.jpg" alt="Miles Sanger in a sunlit arched walkway" width="5152" height="5813" fetchpriority="high"></div><div class="portrait-links"><a class="text-link" href="../assets/miles-sanger-resume.pdf" download="Miles-Sanger-Resume.pdf">Download résumé <span class="file-type">PDF</span></a>${link({label:'LinkedIn',url:'https://www.linkedin.com/in/miles-behrenhausen-sanger'})}<a class="text-link" href="mailto:behrenha@usc.edu">behrenha@usc.edu</a></div></aside><div class="long-bio">${fullBio.map(paragraph => `<p>${esc(paragraph)}</p>`).join('')}</div></div><section class="skills-section" aria-labelledby="skills-title"><h2 id="skills-title">Skills</h2><dl class="skills-grid">${skills.map(group=>`<div><dt>${esc(group.category)}</dt><dd>${group.items.map(esc).join(', ')}</dd></div>`).join('')}</dl></section></main>`;
 await mkdir(`${out}/about`, { recursive: true });
 await writeFile(`${out}/about/index.html`, page('About — Miles Sanger', aboutPage, '../', 'About Miles Sanger, game designer, producer, and writer.', 'about/'));
-const archive = `<main id="main" class="games-page wrap"><a class="back-link text-link" href="../#work"><span aria-hidden="true">←</span> Selected work</a><h1>All <i>games.</i></h1><div class="games-archive">${allProjects.map(p => `<article class="archive-game"><h2><a href="./${esc(p.slug)}/">${esc(p.title)}</a></h2>${p.roles.length || p.team ? `<p>${esc(p.roles.length ? p.roles.join(' · ') : p.team)}</p>` : ''}${p.period ? `<span class="archive-period">${esc(p.period)}</span>` : ''}</article>`).join('')}</div></main>`;
+function archiveDate(project) {
+  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const year = project.period?.match(/\d{4}/)?.[0] || 0;
+  const namedMonths = project.period?.match(new RegExp(months.join('|'), 'g')) || [];
+  return Number(year) * 12 + months.indexOf(namedMonths.at(-1));
+}
+function archiveRow(p) {
+  const image = p.images[0];
+  const role = p.team === 'Solo' ? 'Solo' : p.homeRole || p.roles.join(', ');
+  const meta = [role, p.period].filter(Boolean);
+  const play = p.links.find(item => item.label.startsWith('Play'));
+  const watch = p.links.find(item => item.label.startsWith('Watch'));
+  const actions = [play && { ...play, label: play.label.includes('demo') ? 'Play demo' : 'Play' }, watch && { ...watch, label: 'Watch' }].filter(Boolean);
+  return `<article class="archive-game">
+    ${image ? `<a class="archive-art" href="./${esc(p.slug)}/" aria-label="View ${esc(p.title)}"><img src="../${esc(image.src)}" alt="${esc(image.alt)}" width="${image.width}" height="${image.height}" loading="lazy"></a>` : ''}
+    <div class="archive-copy"><h3><a href="./${esc(p.slug)}/">${esc(p.title)}</a></h3>${p.description ? `<p class="archive-description">${esc(p.description)}</p>` : ''}${meta.length ? `<p class="archive-meta">${meta.map(esc).join('<span aria-hidden="true"> · </span>')}</p>` : ''}</div>
+    ${actions.length ? `<div class="archive-actions">${actions.map(item => `<a class="text-link" href="${esc(item.url)}" target="_blank" rel="noopener noreferrer" aria-label="${esc(item.label)} ${esc(p.title)} (opens in a new tab)">${esc(item.label)}</a>`).join('')}</div>` : ''}
+  </article>`;
+}
+const byNewest = (a, b) => archiveDate(b) - archiveDate(a);
+const digitalGames = [...projects, ...additionalProjects.filter(p => p.format !== 'Board game').sort(byNewest)];
+const boardGames = additionalProjects.filter(p => p.format === 'Board game').sort(byNewest);
+const archive = `<main id="main" class="games-page wrap"><a class="back-link text-link" href="../#work"><span aria-hidden="true">←</span> Selected work</a><h1>All <i>games.</i></h1>${[['Digital games', digitalGames], ['Board games', boardGames]].map(([title, games]) => `<section class="archive-section" aria-labelledby="${title === 'Digital games' ? 'digital-games' : 'board-games'}"><h2 id="${title === 'Digital games' ? 'digital-games' : 'board-games'}">${title}</h2><div class="games-archive">${games.map(archiveRow).join('')}</div></section>`).join('')}</main>`;
 await mkdir(`${out}/games`, { recursive: true });
 await writeFile(`${out}/games/index.html`, page('All Games — Miles Sanger', archive, '../', 'Games by Miles Sanger and collaborators.', 'games/'));
 for (const p of allProjects) {

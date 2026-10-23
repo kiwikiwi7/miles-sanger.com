@@ -9,7 +9,10 @@ export const projects = [
     homeRole: 'Director & Lead Designer',
     team: '5 people', period: 'April 2026–present', status: 'In development',
     release: 'In development', description: 'A digital collectable card game based on identifying and taking pictures of birds in the wild.',
-    images: [{ src: 'assets/games/pic-peck.png', alt: 'Pic Peck gameplay: a hexagonal board, bird cards, and player decks', width: 733, height: 1303, kind: 'portrait' }],
+    images: [
+      { src: 'assets/games/pic-peck-logo.png', alt: 'Pic Peck logo: a blue illustrated card with an egg and leafy branches', width: 240, height: 336, kind: 'logo' },
+      { src: 'assets/games/pic-peck.png', alt: 'Pic Peck gameplay: a hexagonal board, bird cards, and player decks', width: 733, height: 1303, kind: 'portrait' }
+    ],
     screenshots: [
       { file: 'pic-peck-1.webp', alt: 'Pic Peck Little Blue Heron card', width: 207, height: 273 },
       { file: 'pic-peck-2.webp', alt: 'Six Pic Peck bird cards, including Common Swift, Western Barn Owl, and Common Ostrich', width: 673, height: 579 }

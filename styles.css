@@ -109,6 +109,13 @@ html[data-background="flat"] body{background-image:none}
 
 /* An ambient pool of the same seafoam light sits below each portrait. */
 .project-credits{font-size:18px;color:var(--muted);margin-top:25px;max-width:750px}
+.project-highlights{font-size:18px;color:var(--seafoam);margin-top:18px}
+.project-contributions{max-width:820px;margin:45px 0 55px}
+.project-contributions h2{font-size:34px;margin-bottom:22px}
+.project-contributions ul{padding-left:23px;margin:0;font-size:22px;line-height:1.5}
+.project-contributions li+li{margin-top:16px}
+.project-contributions li::marker{color:var(--seafoam)}
+@media(max-width:700px){.project-contributions h2{font-size:30px}.project-contributions ul{font-size:20px}}
 @media(max-width:700px){.project-intro h1.long-title{font-size:clamp(32px,10vw,60px)}}
 .project-gallery{margin-top:75px;padding-top:35px;border-top:1px solid var(--line)}
 .project-gallery h2{font-size:38px;margin-bottom:30px}

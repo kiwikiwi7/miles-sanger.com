@@ -7,8 +7,12 @@ export const projects = [
     slug: 'pic-peck', title: 'Pic Peck', number: '01', category: 'Direction & design',
     roles: ['Director', 'Lead Designer', 'Producer', 'Lead Engineer'],
     homeRole: 'Director & Lead Designer',
-    team: '5 people', period: 'April 2026–present', status: 'In development',
+    team: '5 people', period: 'March 2026–present', status: 'In development',
     release: 'In development', description: 'A digital collectable card game based on identifying and taking pictures of birds in the wild.',
+    contributions: [
+      'Recruited the design and art team to develop a mobile digital collectible card game centered on birdwatching.',
+      'Lead design and engineering, developing an end-to-end demo for playtesting.'
+    ],
     images: [
       { src: 'assets/games/pic-peck-logo.png', alt: 'Pic Peck logo: a blue illustrated card with an egg and leafy branches', width: 240, height: 336, kind: 'logo' },
       { src: 'assets/games/pic-peck.png', alt: 'Pic Peck gameplay: a hexagonal board, bird cards, and blue egg-design card backs in both player decks', width: 732, height: 1303, kind: 'portrait' }
@@ -20,9 +24,14 @@ export const projects = [
   },
   {
     slug: 'voidwatch', title: 'Voidwatch', number: '02', category: 'Production',
-    roles: ['Lead Producer'], team: '10+ people', period: 'Joined 2025',
+    roles: ['Lead Producer', 'QA Lead'], team: '8 people', period: 'September 2025–present',
     homeRole: 'Lead Producer',
     status: 'Demo available', release: 'Early Access planned · February 2027', description: 'A silky-smooth space shooter roguelike.',
+    highlights: 'Public demo available · 400+ Steam wishlists',
+    contributions: [
+      'Lead an eight-person team developing a space shooter roguelike, advancing the game from early alpha to beta toward a planned Steam Early Access release.',
+      'Established a review and QA workflow in Linear, guiding development tasks through code review, testing, and merge approval before completion.'
+    ],
     images: [{ src: 'assets/games/voidwatch.jpg', alt: 'Voidwatch title artwork with a starship facing a vast creature in space', width: 460, height: 215, kind: 'header' }],
     screenshots: [
       { file: 'voidwatch-1.webp', alt: 'Voidwatch star map with the Salacia planet selected', width: 1920, height: 1080 },
@@ -52,9 +61,14 @@ export const projects = [
   },
   {
     slug: 'quarter-life-pounder', title: 'Quarter Life Pounder', number: '04', category: 'Production',
-    roles: ['Associate Producer'], team: '45+ people', period: 'Joined May 2026',
+    roles: ['Associate Producer'], team: '40+ people', period: 'May 2026–present',
     homeRole: 'Associate Producer',
     status: 'In development', release: 'Release planned · May 2027', description: 'A narrative restaurant simulator about an Asian immigrant running a burger diner.',
+    contributions: [
+      'Organize faculty milestones for a narrative cooking game within a 40+ person development team.',
+      'Own the pipeline from usability findings to design and from design to engineering, coordinating handoffs across disciplines.',
+      'Develop high-level production plans covering the design team’s full scope of work.'
+    ],
     images: [{ src: 'assets/games/quarter-life-pounder.png', alt: 'Quarter Life Pounder logo styled as a burger-shaped neon sign', width: 1579, height: 1047, kind: 'logo' }],
     screenshots: [
       { file: 'quarter-life-pounder-1.webp', alt: 'Quarter Life Pounder diner scene with customers talking beside booths and tables', width: 1615, height: 853 }
